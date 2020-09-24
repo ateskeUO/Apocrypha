@@ -8,6 +8,7 @@ public class TableButton : MonoBehaviour
 
     public void TurnOffTextPanel()
     {
+        //This is an invisible button above the table that acts to dismiss the panel when 'blank space' is clicked.
         thePanel.SetActive(false);
     }
 }

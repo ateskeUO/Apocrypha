@@ -27,12 +27,17 @@ public class DescriptionBox : MonoBehaviour
 
     public void WritePanelText(string newText, int numberOfPanels)
     {
+        // Set the box's text based on an inputed string, make exactly the specified number of slots available.
+
         descriptionText.text = newText;
+
+        // Run through all the slots and make sure they are all turned off.
         for(int i = 0; i < slots.Length; i++)
         {
             slots[i].SetActive(false);
         }
 
+        // Run through as many slots as need to be turned on, turn them on. Sensually.
         for(int i = 0; i < numberOfPanels; i++)
         {
             slots[i].SetActive(true);

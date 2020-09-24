@@ -7,6 +7,9 @@ public class Card : MonoBehaviour
 {
     private float timer = 0;
 
+    // Every card needs a name, a list of tags it has, and the ability to hold a timer with a variable amount of time.
+    // Individual cards will need definitions for what happens when their timer runs out as well as definitions for what cards they can turn into.
+
     [SerializeField] private string name;
     [SerializeField] private float timeLeft;
     [SerializeField] private float startingTime;
@@ -24,6 +27,7 @@ public class Card : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Set name text
         nameText.text = name;
     }
 
@@ -35,6 +39,8 @@ public class Card : MonoBehaviour
         timeLeft = startingTime - timer;
         timerText.text = timeLeft.ToString("0.0");
     }
+
+    // Old code, cards no longer open text panel, but will need to add a description to a UI box in the future.
     /*
     public void OpenTextPanel()
     {
